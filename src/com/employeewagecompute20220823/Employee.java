@@ -7,7 +7,7 @@ public class Employee {
 	static public float FULL_DAY_HOUR = 8;
 	static public float PART_TIME_HOUR = 4;
 	static public int MONTHLY_WORKING_DAYS = 20;
-	static public float MONTHLY_HOUR_LIMIT = 25;
+	static public float MONTHLY_HOUR_LIMIT = 20;
 	
 	static public int day = 0;
 	static public float monthlyWage = 0;
