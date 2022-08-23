@@ -10,6 +10,8 @@ public class EmployeeWageCompute20220823 {
 		int attendance = employee.attendance();
 		if (employee.IS_PRESENT == attendance) {
 			System.out.println("Employee is present");
+		} else if (employee.IS_PART_TIME == attendance) {
+			System.out.println("Employee is part time");
 		} else {
 			System.out.println("Employee is absent");
 		}
