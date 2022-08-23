@@ -7,15 +7,7 @@ public class EmployeeWageCompute20220823 {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
 		Employee employee = new Employee();
-		int attendance = employee.attendance();
-		if (employee.IS_PRESENT == attendance) {
-			System.out.println("Employee is present");
-		} else if (employee.IS_PART_TIME == attendance) {
-			System.out.println("Employee is part time");
-		} else {
-			System.out.println("Employee is absent");
-		}
-		System.out.println("Employee wage is "+employee.dailyWage(attendance));
+		System.out.println("Employee wage is "+employee.dailyWage(employee.attendance()));
 	}
 
 }

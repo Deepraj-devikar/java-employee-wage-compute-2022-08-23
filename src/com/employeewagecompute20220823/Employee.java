@@ -8,15 +8,28 @@ public class Employee {
 	static public float PART_TIME_HOUR = 4;
 	
 	public int attendance () {
-		return (int) Math.floor(Math.random() * 10) % 3;
+		int result = (int) Math.floor(Math.random() * 10) % 3;
+		switch (result) {
+		case IS_PRESENT:
+			System.out.println("Employee is present");
+			break;
+		case IS_PART_TIME:
+			System.out.println("Employee is part time");
+			break;
+		default:
+			System.out.println("Employee is absent");
+			break;
+		}
+		return result;
 	}
 	
 	public float dailyWage (int attendance) {
-		if (attendance == IS_PRESENT) {
+		switch (attendance) {
+		case IS_PRESENT:
 			return Math.round((float) WAGE_PER_HOUR * FULL_DAY_HOUR * 100) / 100;
-		} else if (attendance == IS_PART_TIME) {
+		case IS_PART_TIME:
 			return Math.round((float) WAGE_PER_HOUR * PART_TIME_HOUR * 100) / 100;
-		} else {
+		default:
 			return (float) 0.00;
 		}
 	}
